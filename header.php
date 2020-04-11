@@ -13,7 +13,7 @@
     <div class="site-title">
       <?php tcp_the_title_or_logo() ?>
     </div>
-    <div class="flex">
+    <div class="flex text-uppercase">
       <div class="menu-main">
         Menu Block
       </div>

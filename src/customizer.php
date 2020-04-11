@@ -12,7 +12,8 @@ class TPD_Customizer {
       'capability' => 'edit_theme_options',
       'priority' => 30
     ]);
-
+    
+    // Callout
     $wp_customize->add_setting('tpd_navbar_callout_label', [
       'default' => '',
       'type' => 'theme_mod',
@@ -25,6 +26,20 @@ class TPD_Customizer {
       'section' => 'tpd_navbar',
       'type' => 'text',
       'settings' => 'tpd_navbar_callout_label'
+    ]);
+
+    $wp_customize->add_setting('tpd_navbar_callout_link', [
+      'default' => '',
+      'type' => 'theme_mod',
+      'capability' => 'edit_theme_options',
+      'transport' => 'postMessage'
+    ]);
+
+    $wp_customize->add_control('tpd_navbar_callout_link', [
+      'label' => 'Callout Link',
+      'section' => 'tpd_navbar',
+      'type' => 'text',
+      'settings' => 'tpd_navbar_callout_link'
     ]);
   }
 }

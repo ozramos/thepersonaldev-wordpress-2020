@@ -20,8 +20,9 @@ function tcp_the_title_or_logo () {
  */
 function tcp_the_navbar_callout () {
   $callout_label = get_theme_mod('tpd_navbar_callout_label');
+  $callout_link = get_theme_mod('tpd_navbar_callout_link');
 
   if ($callout_label) : ?>
-    <a class="navbar-callout" href=""><?= $callout_label ?></a>
+    <a class="navbar-callout" href="<?= $callout_link ?>"><?= $callout_label ?></a>
   <?php endif;
 }
