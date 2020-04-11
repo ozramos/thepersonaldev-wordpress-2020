@@ -41,6 +41,14 @@ class TPD_Customizer {
       'type' => 'text',
       'settings' => 'tpd_navbar_callout_link'
     ]);
+
+    $wp_customize->selective_refresh->add_partial('tpd_navbar_callout_label', [
+      'selector' => '.navbar-callout',
+      'container_inclusive' => true,
+      'render_callback' => function () {
+        tcp_the_navbar_callout();
+      }
+    ]);
   }
 }
 add_action('customize_register', ['TPD_Customizer', 'register']);
