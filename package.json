@@ -4,8 +4,8 @@
   "description": "Our first custom theme for 2020 🎨",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel assets/sass/main.scss",
-    "build": "parcel build assets/sass/main.scss"
+    "dev": "parcel assets/styles/main.scss assets/js/main.js",
+    "build": "parcel build assets/js/main.js assets/styles/main.scss"
   },
   "author": "",
   "license": "ISC",
