@@ -42,14 +42,46 @@
   display: flex;
 
   li {
+    position: relative;
+
+    .menu-item-has-children {
+      > a:before {
+        content: '⯇ ';
+      }
+    }
+    
     a {
       color: $color-1;
       padding: 15px 15px;
       font-size: 0.85rem;
+      display: inline-block;
     }
 
-    &.current-menu-item a {
+    &.current-menu-item a, &:hover > a {
       border-bottom: 2px solid $link-1;
+    }
+  }
+
+  .sub-menu {
+    position: absolute;
+    margin: 0;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid darken($brand-2, 10%);
+    top: 48px;
+    background: lighten($bg-1, 10%);
+    box-shadow: 1px 1px rgba(0,0,0,0.35);
+    list-style: none;
+    z-index: 10;
+
+    a {
+      width: 100%;
+    }
+
+    .sub-menu {
+      left: -100%;
+      top: -22px;
+      margin-left: -62px;
     }
   }
 }

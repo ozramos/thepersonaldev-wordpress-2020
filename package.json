@@ -4,8 +4,8 @@
   "description": "Our first custom theme for 2020 🎨",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel assets/styles/main.scss",
-    "build": "parcel build assets/styles/main.scss"
+    "dev": "parcel assets/js/main.js assets/styles/main.scss",
+    "build": "parcel build assets/js/main.js assets/styles/main.scss"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "flexboxgrid": "^6.3.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "superfish": "^1.7.10"
   }
 }
