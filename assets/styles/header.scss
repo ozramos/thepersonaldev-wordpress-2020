@@ -120,6 +120,15 @@
   }
 }
 
+body.admin-bar.mobile-main-menu-is-open .mobile-main-menu-wrap {
+  top: 132px;
+}
+@media screen and (max-width: 782px) {
+  body.admin-bar.mobile-main-menu-is-open .mobile-main-menu-wrap {
+    top: 146px;
+  }    
+}
+
 .mobile-main-menu-is-open {
   .mobile-main-menu-wrap {
     top: 100px;
@@ -185,7 +194,8 @@
 
   .sub-menu {
     background: lighten($bg-1, 15%);
-    display: none;
+    height: 0;
+    overflow: hidden;
     
     > li > a {padding-left: 60px}
     .sub-menu {
@@ -208,7 +218,7 @@
     }
     
     > .sub-menu {
-      display: block;
+      height: auto;
     }
   }
 }
@@ -235,4 +245,8 @@
   .mobile-main-menu-hamburger {padding: 10px;}
 
   .navbar-callout {padding: 10px;}
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-callout {display: none}
 }
