@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:front-end dev:blocks",
     "dev:front-end": "parcel assets/js/main.js assets/styles/main.scss",
-    "dev:blocks": "wp-scripts start assets/js/blocks/prefixed-title.js --output-path=dist/js/blocks",
+    "dev:blocks": "wp-scripts start assets/js/blocks/captioned-heading.js --output-path=dist/js/blocks",
     "build:front-end": "parcel build assets/js/main.js assets/styles/main.scss",
-    "build:blocks": "wp-scripts build assets/js/blocks/prefixed-title.js --output-path=dist/js/blocks",
+    "build:blocks": "wp-scripts build assets/js/blocks/captioned-heading.js --output-path=dist/js/blocks",
     "build": "npm-run-all build:front-end build:blocks"
   },
   "author": "",
