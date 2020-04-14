@@ -4,12 +4,12 @@
   "description": "Our first custom theme for 2020 🎨",
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all --parallel dev:front-end dev:editor",
+    "dev": "npm-run-all --parallel dev:front-end dev:blocks",
     "dev:front-end": "parcel assets/js/main.js assets/styles/main.scss",
-    "dev:editor": "wp-scripts start assets/js/editor/index.js --output-path=dist/js/editor",
+    "dev:blocks": "wp-scripts start assets/js/blocks/prefixed-title.js --output-path=dist/js/blocks",
     "build:front-end": "parcel build assets/js/main.js assets/styles/main.scss",
-    "build:editor": "wp-scripts build assets/js/editor/index.js --output-path=dist/js/editor",
-    "build": "npm-run-all build:front-end build:editor"
+    "build:blocks": "wp-scripts build assets/js/blocks/prefixed-title.js --output-path=dist/js/blocks",
+    "build": "npm-run-all build:front-end build:blocks"
   },
   "author": "",
   "license": "ISC",
