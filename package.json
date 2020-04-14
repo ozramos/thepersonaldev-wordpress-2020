@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:front-end dev:blocks",
-    "dev:front-end": "parcel assets/js/main.js assets/styles/main.scss",
+    "dev:front-end": "parcel assets/js/main.js assets/styles/main.scss assets/styles/blocks.scss",
     "dev:blocks": "wp-scripts start assets/js/blocks/captioned-heading.js --output-path=dist/js/blocks",
-    "build:front-end": "parcel build assets/js/main.js assets/styles/main.scss",
+    "build:front-end": "parcel build assets/js/main.js assets/styles/main.scss assets/styles/blocks.scss",
     "build:blocks": "wp-scripts build assets/js/blocks/captioned-heading.js --output-path=dist/js/blocks",
     "build": "npm-run-all build:front-end build:blocks"
   },

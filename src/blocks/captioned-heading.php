@@ -12,7 +12,7 @@ add_action('init', function () {
     $assets['dependencies'],
     $assets['version']
   );
-
+  
   register_block_type('tpd/captioned-heading', [
     'editor_script' => 'tpd-blocks-captioned-heading'
   ]);
