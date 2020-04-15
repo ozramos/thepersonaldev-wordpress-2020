@@ -7,9 +7,20 @@ $color-editor-main-hover: #191e23;
 .edit-post-visual-editor {
   background: $bg-1;
 
-  .editor-post-title__input, * {
+  .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+    color: $color-1;
+    opacity: 0.5;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  *, .editor-post-title__input {
     color: $color-1;
     font-family: Arial, Helvetica, sans-serif;
+
+    &::placeholder {
+      color: $color-1;
+      opacity: 0.5;
+    }
   }
 
   .wp-block {
@@ -21,6 +32,12 @@ $color-editor-main-hover: #191e23;
     * {color: $color-editor-main;}
     &:hover {
       * {color: $color-editor-main-hover;}
+    }
+  }
+
+  textarea {
+    &::placeholder {
+      color: red;
     }
   }
 

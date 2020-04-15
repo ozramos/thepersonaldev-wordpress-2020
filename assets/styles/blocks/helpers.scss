@@ -8,6 +8,7 @@
 .wp-block-group {
   position: relative;
   z-index: 1;
+  margin-bottom: 100px;
 
   &.has-bg-2-background-color.has-background {
     background: $bg-2;
