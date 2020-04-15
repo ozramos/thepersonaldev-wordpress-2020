@@ -1,1 +1,8 @@
-.wp-block-tpd-labeled-progress-bar {}
+.wp-block-tpd-labeled-progress-bar {
+  .tpd-labeled-progress-bar-label {
+    flex: 1;
+  }
+  .tpd-labeled-progress-bar-percent {
+    flex: 0 0 80px;
+  }
+}

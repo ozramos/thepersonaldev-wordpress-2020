@@ -1,3 +1,6 @@
 .tpd-control-group {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
 }

@@ -19,7 +19,7 @@ registerBlockType('tpd/labeled-progress-bar', {
     label: {
       type: 'array',
       source: 'children',
-      selector: 'p.tpd-labeled-progress-bar-label'
+      selector: 'div.tpd-labeled-progress-bar-label'
     },
     percent: {
       type: 'string',
@@ -48,9 +48,10 @@ registerBlockType('tpd/labeled-progress-bar', {
 
     return (
       <div className={className}>
-        <div class="tpd-control-group">
+        <div className="tpd-control-group">
           <RichText
             tagName='div'
+            className='tpd-labeled-progress-bar-label'
             placeholder='Label text'
             label='Label'
             onChange={onChangeLabel}
@@ -59,6 +60,7 @@ registerBlockType('tpd/labeled-progress-bar', {
           <TextControl
             label='Percent'
             type='number'
+            className='tpd-labeled-progress-bar-percent'
             onChange={onChangePercent}
             value={percent}
           />
@@ -67,17 +69,23 @@ registerBlockType('tpd/labeled-progress-bar', {
     )
   },
 
-  // save: props => {
-  //   const {
-  //     className,
-  //     attributes: {label, percent}
-  //   } = props
+  save: props => {
+    const {
+      className,
+      attributes: {label, percent}
+    } = props
 
-  //   return (
-  //     <div className={className}>
-  //       <RichText.Content tagName='p' value={label} />
-  //       <div>{percent}</div>
-  //     </div>
-  //   )
-  // }
+    return (
+      <div className={className}>
+        <div className="tpd-control-group">
+          <RichText.Content
+            className='tpd-labeled-progress-bar-label'
+            tagName='div'
+            value={label} 
+          />
+          <div className='tpd-labeled-progress-bar-percent'>{percent}</div>
+        </div>
+      </div>
+    )
+  }
 })
