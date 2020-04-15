@@ -1,17 +1,36 @@
 .wp-block-tpd-captioned-heading {
-  margin-bottom: 3rem;
-  
   .tpd-captioned-heading-subtitle {
     color: $link-1;
-    margin: 0;
-    font-size: 2rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
   }
   .tpd-captioned-heading {
-    font-size: 5rem;
+    font-size: 2.5rem;
     margin-top: 10px;
     margin-bottom: 30px;
   }
   .tpd-captioned-heading-content {
     font-size: 2rem;
+  }
+}
+
+body.home {
+  main > div:first-child {
+    .wp-block-tpd-captioned-heading {
+      margin-bottom: 60px;
+    }
+
+    .tpd-captioned-heading-subtitle {
+      font-size: 2rem;
+      text-transform: none;
+    }
+    .tpd-captioned-heading {
+      font-size: 5rem;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+    .tpd-captioned-heading-content {
+      font-size: 2rem;
+    }
   }
 }
