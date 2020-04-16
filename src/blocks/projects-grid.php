@@ -19,7 +19,9 @@ add_action('init', function () {
 function tpd_blocks_projects_grid_render ($attributes, $content) {
   $posts = get_posts([
     'post_type' => 'tpd_project',
-    'posts_per_page' => 6
+    'posts_per_page' => 6,
+    'order_by' => 'order',
+    'order' => 'ASC'
   ]);
 
   if (!count($posts)) {
@@ -30,12 +32,21 @@ function tpd_blocks_projects_grid_render ($attributes, $content) {
   ob_start(); ?>
     <div class="tpd-projects-grid row">
       <?php foreach($posts as $post): setup_postdata($post); ?>
-        <div class="tpd-projects-item col-xs-12 col-lg-4">
-          <?php if (has_post_thumbnail($post->ID)): ?>
-            <div class="tpd-projects-item-cover">
-              <?php the_post_thumbnail() ?>
-            </div>
-          <?php endif ?>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="tpd-projects-item">
+            <?php if (has_post_thumbnail($post->ID)): ?>
+              <a href="<?= get_permalink() ?>" class="tpd-projects-item-cover">
+                <?php the_post_thumbnail() ?>
+              </a>
+              <div class="tpd-projects-item-content">
+                <h3><a href="<?= get_permalink() ?>"><?php the_title() ?></a></h3>
+                <p><?php the_excerpt() ?></p>
+                <p>
+                  <a href="<?= get_permalink() ?>" class="button">Read More</a>
+                </p>
+              </div>
+            <?php endif ?>
+          </div>
         </div>
       <?php endforeach; ?>
     </div>

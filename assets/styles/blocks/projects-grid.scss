@@ -1,12 +1,47 @@
 .tpd-projects-grid {
   margin-bottom: 100px;
+  border-radius: 10px;
   
   .tpd-projects-item-cover img {
     max-width: 100%;
     height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .tpd-projects-item {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     margin-bottom: 2rem;
+    background: $bg-2;
+    border-bottom: 1px solid $link-1;
+    transition: border-bottom 0.35s ease, margin-bottom 0.35s ease;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+
+    .button {margin-top: 20px;}
+
+    &:hover {
+      border-bottom: 4px solid $link-1;
+      margin-bottom: calc(2rem - 3px);
+    }
+  }
+
+  .tpd-projects-item-content {
+    padding: 20px;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 0;
+
+      a {
+        color: $color-1;
+        text-decoration: none;
+      }
+      a:hover {color: $link-1}
+    }
+
+    p {
+      color: $color-1;
+    }
   }
 }

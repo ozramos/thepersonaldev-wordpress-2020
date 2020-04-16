@@ -12,3 +12,20 @@ a {
   color: $link-1;
   text-decoration: none;
 }
+
+p {
+  line-height: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid $link-1;
+  padding: 10px 20px;
+  border-radius: 3px;
+  transition: background 0.35s ease, color 0.35s ease;
+
+  &:hover {
+    background: $link-1;
+    color: $bg-1;
+  }
+}
