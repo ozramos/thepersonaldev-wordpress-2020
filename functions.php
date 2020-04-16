@@ -1,9 +1,12 @@
 <?php
 require get_template_directory() . '/src/template-tags.php';
 require get_template_directory() . '/src/customizer.php';
+
 require get_template_directory() . '/src/blocks/index.php';
 require get_template_directory() . '/src/blocks/captioned-heading.php';
 require get_template_directory() . '/src/blocks/labeled-progress-bar.php';
+require get_template_directory() . '/src/blocks/projects-grid.php';
+
 require get_template_directory() . '/src/cpt/projects.php';
 
 /**

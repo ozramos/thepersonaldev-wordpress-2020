@@ -13,7 +13,7 @@ add_action('init', function () {
     'rewrite' => [
       'slug' => 'projects'
     ],
-    'supports' => ['title', 'excerpt', 'editor', 'thumbnail'],
+    'supports' => ['title', 'excerpt', 'editor', 'thumbnail', 'page-attributes'],
     'show_in_rest' => true
   ]);
 });

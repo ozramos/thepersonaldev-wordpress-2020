@@ -6,6 +6,7 @@ $color-editor-main-hover: #191e23;
 
 .edit-post-visual-editor {
   background: $bg-1;
+  overflow-x: hidden;
 
   .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
     color: $color-1;
