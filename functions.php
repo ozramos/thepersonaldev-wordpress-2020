@@ -77,3 +77,38 @@ add_action('after_setup_theme', function () {
     ]
   ]);
 });
+
+/**
+ * Widgets
+ */
+add_action('widgets_init', function () {
+  register_sidebar([
+    'id' => 'footer-left',
+    'name' => 'Footer: Left Column',
+    'description' => 'Shown at the bottom of the site to the left (or as the first footer item on mobile)',
+    'before_widget' => '<div id="$1" class="$2">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  ]);
+
+  register_sidebar([
+    'id' => 'footer-center',
+    'name' => 'Footer: Center Column',
+    'description' => 'Shown at the bottom of the site in the center (or as the second footer item on mobile)',
+    'before_widget' => '<div id="$1" class="$2">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  ]);
+
+  register_sidebar([
+    'id' => 'footer-right',
+    'name' => 'Footer: Right Column',
+    'description' => 'Shown at the bottom of the site to the right (or as the last footer item on mobile)',
+    'before_widget' => '<div id="$1" class="$2">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  ]);
+});
