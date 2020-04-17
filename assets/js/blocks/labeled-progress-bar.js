@@ -19,17 +19,12 @@ registerBlockType('tpd/labeled-progress-bar', {
     label: {
       type: 'array',
       source: 'children',
-      selector: 'div.tpd-labeled-progress-bar-label'
+      selector: '.tpd-labeled-progress-bar-label'
     },
     percent: {
       type: 'string',
       default: 0
     }
-  },
-
-  example: {
-    label: 'Label',
-    percent: 0
   },
 
   edit: props => {

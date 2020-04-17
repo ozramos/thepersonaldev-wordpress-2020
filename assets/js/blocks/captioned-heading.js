@@ -29,12 +29,6 @@ registerBlockType('tpd/captioned-heading', {
     }
   },
   
-  example: {
-    subtitle: 'subtile',
-    heading: 'Heading',
-    content: 'lorem ipsum...'
-  },
- 
   edit: props => {
     const {
       className,
