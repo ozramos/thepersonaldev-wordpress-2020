@@ -1,0 +1,18 @@
+// @see https://wpdevdesign.com/how-to-make-youtube-videos-take-up-full-width-in-wordpress/
+.wp-block-embed.is-type-video.is-provider-youtube {
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+	position: relative;
+	max-width: 100%;
+	height: auto;
+  padding-bottom: 56.25%;
+  
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

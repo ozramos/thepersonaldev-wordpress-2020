@@ -1,6 +1,10 @@
 .wp-block-tpd-captioned-heading {
   margin-bottom: 3rem;
 
+  &:not(:first-child) {
+    margin-top: 100px;
+  }
+
   .tpd-captioned-heading-subtitle {
     color: $link-1;
     font-size: 1.25rem;
@@ -10,6 +14,7 @@
     font-size: 2.5rem;
     margin-top: 10px;
     margin-bottom: 30px;
+    color: $color-1-strong;
   }
   .tpd-captioned-heading-content {
     font-size: 1rem;
@@ -22,6 +27,7 @@ body.home,
   main > div:first-child,
   div:not(.block-editor-inner-blocks) > .block-editor-block-list__layout > .wp-block:first-child {
     .wp-block-tpd-captioned-heading {
+      margin-top: 0;
       margin-bottom: 60px;
     }
 

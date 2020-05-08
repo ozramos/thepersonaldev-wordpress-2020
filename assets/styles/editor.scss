@@ -9,6 +9,11 @@ $color-editor-main-hover: #191e23;
   background: $bg-1;
   overflow-x: hidden;
 
+  a {
+    color: $brand-2;
+    text-decoration: none;
+  }
+
   .block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
     color: $color-1;
     opacity: 0.5;
