@@ -1162,6 +1162,7 @@ body.home div:not(.block-editor-inner-blocks) > .block-editor-block-list__layout
   padding: 20px;
   border: 1px solid #ffc576;
   border-radius: 6px;
+  margin-bottom: 20px;
 }
 
 .tpd-icon-callout-content {

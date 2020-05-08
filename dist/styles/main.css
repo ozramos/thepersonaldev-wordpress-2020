@@ -1664,8 +1664,10 @@ body.admin-bar.mobile-main-menu-is-open .mobile-main-menu-wrap {
 }
 .wp-block-group.has-bg-2-background-color.has-background {
   background: #313552;
-  padding-top: 100px;
-  padding-bottom: 100px;
+
+  padding: 100px 20px;
+  /* padding-top: 100px;
+  padding-bottom: 100px; */
 }
 .wp-block-group.has-bg-2-background-color.has-background:before {
   content: "";
@@ -1838,6 +1840,7 @@ body.home div:not(.block-editor-inner-blocks) > .block-editor-block-list__layout
   padding: 20px;
   border: 1px solid #ffc576;
   border-radius: 6px;
+  margin-bottom: 20px;
 }
 
 .tpd-icon-callout-content {
