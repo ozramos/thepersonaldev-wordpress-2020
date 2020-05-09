@@ -50,9 +50,9 @@ function tpd_blocks_projects_grid_render ($attributes, $content) {
   ob_start(); ?>
     <div class="tpd-projects-grid row">
       <?php foreach($posts as $post): setup_postdata($post); ?>
-        <div class="col-xs-12 col-sm-6 col-md-4">
-          <div class="tpd-projects-item">
-            <?php if (has_post_thumbnail($post->ID)): ?>
+        <?php if (has_post_thumbnail($post->ID)): ?>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="tpd-projects-item">
               <a href="<?= get_permalink() ?>" class="tpd-projects-item-cover">
                 <?php the_post_thumbnail() ?>
               </a>
@@ -64,8 +64,8 @@ function tpd_blocks_projects_grid_render ($attributes, $content) {
                   <a href="<?= get_permalink() ?>" class="button">Read More</a>
                 </p>
               </div>
-            <?php endif ?>
-          </div>
+            </div>
+          <?php endif ?>
         </div>
       <?php endforeach; ?>
     </div>
