@@ -17,4 +17,12 @@
     z-index: -1;
     background: $bg-2;
   }
+
+  > .row {
+    justify-content: space-between;
+  }
+}
+
+.footer-copyright {
+  margin-top: 60px;
 }

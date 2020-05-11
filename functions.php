@@ -112,4 +112,14 @@ add_action('widgets_init', function () {
     'before_title' => '<h3 class="widget-title">',
     'after_title' => '</h3>'
   ]);
+
+  register_sidebar([
+    'id' => 'footer-copyright',
+    'name' => 'Footer: Copyright',
+    'description' => 'Shown below all columns',
+    'before_widget' => '<div id="$1" class="$2">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  ]);
 });
