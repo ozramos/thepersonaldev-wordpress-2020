@@ -23,6 +23,10 @@ add_action('init', function () {
         'type' => 'array',
         'default' => [],
         'items' => ['type' => 'number']
+      ],
+      'maxPosts' => [
+        'type' => 'number',
+        'default' => -1
       ]
     ]
   ]);
@@ -53,7 +57,7 @@ function tpd_blocks_projects_grid_render ($attributes, $content) {
   
   $posts = get_posts([
     'post_type' => 'tpd_project',
-    'posts_per_page' => 6,
+    'posts_per_page' => $attributes['maxPosts'],
     'order_by' => 'order',
     'order' => 'ASC',
     'tax_query' => $tax_query

@@ -1,7 +1,7 @@
 import {registerBlockType} from '@wordpress/blocks'
 import {createElement} from '@wordpress/element'
 import {withSelect} from '@wordpress/data'
-import {PanelBody} from '@wordpress/components'
+import {PanelBody, RangeControl} from '@wordpress/components'
 import {InspectorControls} from '@wordpress/editor'
 import ServerSideRender from '@wordpress/server-side-render'
 import ProjectTagSelector from './components/ProjectTagSelector'
@@ -25,6 +25,10 @@ registerBlockType('tpd/projects-grid', {
       type: 'array',
       items: 'number',
       default: []
+    },
+    maxPosts: {
+      type: 'number',
+      default: -1
     }
   },
   
@@ -43,11 +47,14 @@ registerBlockType('tpd/projects-grid', {
       }))
     }
 
-    const onExcludedTagsChange = tags => {
-      setAttributes({excludedTags: tags})
+    const onExcludedTagsChange = excludedTags => {
+      setAttributes({excludedTags})
     }
-    const onMustIncludeTagsChange = tags => {
-      setAttributes({mustIncludeTags: tags})
+    const onMustIncludeTagsChange = mustIncludeTags => {
+      setAttributes({mustIncludeTags})
+    }
+    const onPostCountChange = maxPosts => {
+      setAttributes({maxPosts})
     }
 
     return (
@@ -56,6 +63,9 @@ registerBlockType('tpd/projects-grid', {
           <PanelBody title="Tag Manager">
             <ProjectTagSelector attributes={attributes} tags={tagOpts} selectedTags={attributes.excludedTags} label="Exclude these tags:" onChange={onExcludedTagsChange} />
             <ProjectTagSelector attributes={attributes} tags={tagOpts} selectedTags={attributes.mustIncludeTags} label="Must include these tags:" onChange={onMustIncludeTagsChange} />
+          </PanelBody>
+          <PanelBody title="Post Count">
+            <RangeControl label="Max posts" value={attributes.maxPosts} min={-1} max={15} onChange={onPostCountChange} />
           </PanelBody>
         </InspectorControls>
         <ServerSideRender block='tpd/projects-grid' attributes={attributes} />
