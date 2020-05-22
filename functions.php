@@ -9,7 +9,6 @@ require get_template_directory() . '/src/blocks/projects-grid.php';
 require get_template_directory() . '/src/blocks/icon-callout.php';
 
 require get_template_directory() . '/src/cpt/projects.php';
-require get_template_directory() . '/src/cpt/journal.php';
 
 /**
  * Global Asssets
