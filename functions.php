@@ -8,8 +8,6 @@ require get_template_directory() . '/src/blocks/labeled-progress-bar.php';
 require get_template_directory() . '/src/blocks/projects-grid.php';
 require get_template_directory() . '/src/blocks/icon-callout.php';
 
-require get_template_directory() . '/src/cpt/projects.php';
-
 /**
  * Global Asssets
  */
@@ -48,7 +46,7 @@ add_action('init', function () {
 add_action('after_setup_theme', function () {
   add_theme_support('title-tag');
   add_theme_support('custom-logo');
-  add_theme_support('post-thumbnails', ['post', 'page', 'tpd_project', 'projects', 'journal']);
+  add_theme_support('post-thumbnails', ['post', 'page', 'projects', 'journal']);
 });
 
 /**
