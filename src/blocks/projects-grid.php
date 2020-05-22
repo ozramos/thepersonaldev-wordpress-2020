@@ -56,7 +56,7 @@ function tpd_blocks_projects_grid_render ($attributes, $content) {
   }
   
   $posts = get_posts([
-    'post_type' => 'tpd_project',
+    'post_type' => 'projects',
     'posts_per_page' => $attributes['maxPosts'],
     'order_by' => 'order',
     'order' => 'ASC',

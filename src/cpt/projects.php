@@ -1,7 +1,7 @@
 <?php
 
 add_action('init', function () {
-  register_taxonomy('project_tag', 'tpd_project', [
+  register_taxonomy('project_tag', 'projects', [
     'labels' => [
       'name' => 'Tags',
       'singular_name' => 'Tag'
